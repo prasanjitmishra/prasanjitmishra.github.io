@@ -1,0 +1,133 @@
+@import "compass";
+@import "partials/variables";
+@import "partials/baseClasses";
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $white-clr;
+    background: $body-bg-clr;
+    div.parent{
+        @extend.common_parent_prop;
+        padding: 50px 0 150px 0;
+        margin-top: 50px;
+        
+        div.header-image{
+            text-align: center;
+            img{
+                margin: 50px auto;
+                width:50%;
+            }
+        }
+        
+        div.header-text{
+            background: $header-bg-clr;
+            padding: 40px;
+            text-align: center;
+            font-size: $font35;
+            margin: 100px 0 50px 0;
+        };
+        
+        div.search-bar-parent{
+            padding: 0 21%;
+            div.search-bar-child{
+                position: relative;
+                span.search-icon{
+                    top: 33px;
+                    left: 10px;
+                };
+                input{
+                    padding: 30px;
+                    font-size: $font32;
+                    background: $parent-bg-clr;
+                    border: 2px solid $white-clr;
+                    @include border-radius(50px);
+                    color: $white-clr;
+                    display: inline-block;
+                    text-align: center;
+                    outline: none;
+                    text-transform: uppercase;
+                };
+            };
+        };
+        
+        div.information{
+            font-size: $font35;
+            text-transform: uppercase;
+            text-align: center;
+            margin: 150px 0 0 0;
+        };
+    };
+    
+    div.related-movies-response-parent{
+        @extend.common_parent_prop;
+        padding:50px 0 0 0;
+        
+        div.response-parent{
+            position: relative;
+            text-align: center;
+            .response-back-arrow{
+                left:50px;
+                top: 20px;
+            };
+            .search-results{
+                font-size: $font35; 
+            }
+            .search-Text{
+                font-size: $font30;
+                opacity: 0.7;
+                text-transform: capitalize;
+            }
+            
+        }
+        div.movie-poster{
+            ul{
+                background: $white-clr;
+                display: inline-block;
+                padding: 5px;
+                li{
+                    float: left;
+                    width: 48.80%;
+                    padding: 5px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    };
+    
+    div.single-movies-response-parent{
+        @extend.common_parent_prop;
+        
+        .back-arrow-circle-parent{
+            position: relative;
+            .back-arrow-circle{
+                top: 50px;
+                left: 30px;
+            }
+        }
+        div.Detail-image{
+            img{
+                width: 100%;
+            }
+        }
+        div.movie-name{
+            padding: 30px 20px; 
+            .movie-name-text{
+                font-size: $font35;
+            };
+            .movie-release-year{
+                font-size: $font25;
+            }
+        };
+        
+        div.movie-Detail-text{
+            background: $white-clr;
+            color: $black-clr;
+            padding: 30px;
+            font-size: 30px;
+            line-height: 50px;
+            
+        }
+    }
+}

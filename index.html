@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/style.css">
+    </head>
+    
+    <body ng-app="movieApp" ng-controller="movieController" ng-init="errFlag='True'">
+        <div class="parent">
+            <div class="header-image">
+                <img ng-src="images/omdb-logo.png" alt="logo">
+            </div>
+            <div class="header-text">
+                Search for your favourite movie...
+            </div>
+            
+            <div class="search-bar-parent">
+                <form ng-submit="submit()">
+                    <div class="search-bar-child">
+                        <span class="search-icon"></span>
+                        <input type="text" value="SEARCH" placeholder="SEARCH" ng-model="searchedText" />
+                    </div>    
+                </form>
+            </div>
+            
+            <div class="information">
+                <div class="margin_10_0">The Largest</div>
+                <div class="margin_10_0">online movie database</div>
+            </div>
+        </div>
+        
+        <div class="related-movies-response-parent">
+            <div class="response-parent">
+                <div class="response-back-arrow"></div>
+                <div class="search-results">
+                    Search Results
+                </div>
+                <div class="search-Text">
+                    {{searchedText+"..."}}
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="movie-poster" ng-if="errFlag == 'False'">
+                <ul>
+                    <li ng-repeat="data in RelatedMoviesDetails.Search" data-id="{{data.imdbID}}" 
+                                                                        ng-click="getMovieDetail(this.data.imdbID)">
+                        <img ng-src="{{data.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' :data.Poster}}" alt="" >
+                    </li>
+                </ul>
+            </div>
+            <div class="error" ng-if="errFlag == 'True'">{{errText}}</div>
+        </div>
+
+        <div class="single-movies-response-parent" ng-if="errFlag == 'False'">
+            <div class="back-arrow-circle-parent">
+                <span class="back-arrow-circle"></span>
+            </div>
+            <div class="Detail-image">
+                <img ng-src="{{SingleMovieDetails.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' : SingleMovieDetails.Poster}}" alt="" >
+            </div>  
+            <div class="movie-name">
+                <div class="movie-name-text">
+                    {{SingleMovieDetails.Title}}
+                </div>
+                <div class="movie-release-year">
+                    {{"Release Year :" + SingleMovieDetails.Year}}
+                </div>
+            </div>
+
+            <div class="movie-Detail-text">
+                {{SingleMovieDetails.Plot}}
+            </div>
+
+        </div>
+        
+        
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+input{
+    &:selection,&:focus,&:hover{
+        border:0;
+        outline: none;
+        color:#FFF;
+    };
+    &::-webkit-input-placeholder{
+        color:#FFF;
+    }
+}
+ul,li{list-style: none}
+ul{margin: 0;padding: 0}
+
+.search-icon{
+    background: url("../images/search-icon.png") no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 38px;
+    width: 38px;  
+}
+
+.margin_10_0{
+    margin: 10px 0;
+}
+.clear{clear: both}
+.response-back-arrow{
+    background: url("../images/back-arrow.png") no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 42px;
+    width: 22px;
+}
+.back-arrow-circle{
+    background: url("../images/back-arrow-circle.png") no-repeat;
+    display: inline-block;
+    position: absolute;
+    height: 72px;
+    width: 72px;        
+}
+.common_parent_prop{
+    background: $parent-bg-clr;
+    margin: 10px auto;
+    width: 850px;
+}
+
+.error{
+    text-align: center;
+    font-size: $font30;
+    opacity: 0.5;
+}
