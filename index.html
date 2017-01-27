@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="en">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
         <link rel="stylesheet" href="stylesheets/style.css">
     </head>
     
@@ -32,7 +35,7 @@
         
         <div class="related-movies-response-parent">
             <div class="response-parent">
-                <div class="response-back-arrow"></div>
+                <div class="response-back-arrow hide"></div>
                 <div class="search-results">
                     Search Results
                 </div>
@@ -43,8 +46,9 @@
             <div class="clear"></div>
             <div class="movie-poster" ng-if="errFlag == 'False'">
                 <ul>
-                    <li ng-repeat="data in RelatedMoviesDetails.Search" data-id="{{data.imdbID}}" ng-if="data.Poster!='N/A'" ng-click="getMovieDetail(this.data.imdbID)">
-                        <img ng-src="{{data.Poster}}" alt="" >
+                    <li ng-repeat="data in RelatedMoviesDetails.Search" data-id="{{data.imdbID}}"  
+                        ng-click="getMovieDetail(this.data.imdbID)">
+                        <img ng-src="{{data.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' :data.Poster}}" alt="Image Not Available" >
                     </li>
                 </ul>
             </div>
@@ -52,11 +56,11 @@
         </div>
 
         <div class="single-movies-response-parent" ng-if="errFlag == 'False'">
-            <div class="back-arrow-circle-parent">
+            <div class="back-arrow-circle-parent hide">
                 <span class="back-arrow-circle"></span>
             </div>
             <div class="Detail-image">
-                <img ng-src="{{SingleMovieDetails.Poster}}" alt="" >
+                <img ng-src="{{SingleMovieDetails.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' : SingleMovieDetails.Poster}}" alt="Image Not Available" >
             </div>  
             <div class="movie-name">
                 <div class="movie-name-text">

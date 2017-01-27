@@ -1,212 +1,113 @@
-/* line 2, ../sass/partials/_baseClasses.scss */
-input:selection, input:focus, input:hover {
-  border: 0;
-  outline: none;
-  color: #FFF;
-}
-/* line 7, ../sass/partials/_baseClasses.scss */
-input::-webkit-input-placeholder {
-  color: #FFF;
-}
+/*
+Error: Undefined mixin 'border-radius'.
+        on line 43 of style.scss, in `border-radius'
+        from line 43 of style.scss
 
-/* line 11, ../sass/partials/_baseClasses.scss */
-ul, li {
-  list-style: none;
-}
+38:                 input{
+39:                     padding: 30px 50px;
+40:                     font-size: $font32;
+41:                     background: $parent-bg-clr;
+42:                     border: 2px solid $white-clr;
+43:                     @include border-radius(50px);
+44:                     color: $white-clr;
+45:                     display: inline-block;
+46:                     text-align: center;
+47:                     outline: none;
+48:                     text-transform: uppercase;
 
-/* line 12, ../sass/partials/_baseClasses.scss */
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 14, ../sass/partials/_baseClasses.scss */
-.search-icon {
-  background: url("../images/search-icon.png") no-repeat;
-  display: inline-block;
-  position: absolute;
-  height: 38px;
-  width: 38px;
-}
-
-/* line 22, ../sass/partials/_baseClasses.scss */
-.margin_10_0 {
-  margin: 10px 0;
-}
-
-/* line 25, ../sass/partials/_baseClasses.scss */
-.clear {
-  clear: both;
-}
-
-/* line 26, ../sass/partials/_baseClasses.scss */
-.response-back-arrow {
-  background: url("../images/back-arrow.png") no-repeat;
-  display: inline-block;
-  position: absolute;
-  height: 42px;
-  width: 22px;
-}
-
-/* line 33, ../sass/partials/_baseClasses.scss */
-.back-arrow-circle {
-  background: url("../images/back-arrow-circle.png") no-repeat;
-  display: inline-block;
-  position: absolute;
-  height: 72px;
-  width: 72px;
-}
-
-/* line 40, ../sass/partials/_baseClasses.scss */
-.common_parent_prop, body div.parent, body div.related-movies-response-parent, body div.single-movies-response-parent {
-  background: #f5ab35;
-  margin: 10px auto;
-  width: 850px;
-}
-
-/* line 46, ../sass/partials/_baseClasses.scss */
-.error {
-  text-align: center;
-  font-size: 30px;
-  opacity: 0.5;
-}
-
-/* line 5, ../sass/style.scss */
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  background: #959595;
-}
-/* line 9, ../sass/style.scss */
-body div.parent {
-  padding: 50px 0 150px 0;
-  margin-top: 50px;
-}
-/* line 14, ../sass/style.scss */
-body div.parent div.header-image {
-  text-align: center;
-}
-/* line 16, ../sass/style.scss */
-body div.parent div.header-image img {
-  margin: 50px auto;
-  width: 50%;
-}
-/* line 22, ../sass/style.scss */
-body div.parent div.header-text {
-  background: #f7bc5d;
-  padding: 40px;
-  text-align: center;
-  font-size: 35px;
-  margin: 100px 0 50px 0;
-}
-/* line 30, ../sass/style.scss */
-body div.parent div.search-bar-parent {
-  padding: 0 21%;
-}
-/* line 32, ../sass/style.scss */
-body div.parent div.search-bar-parent div.search-bar-child {
-  position: relative;
-}
-/* line 34, ../sass/style.scss */
-body div.parent div.search-bar-parent div.search-bar-child span.search-icon {
-  top: 30px;
-  left: 10px;
-}
-/* line 38, ../sass/style.scss */
-body div.parent div.search-bar-parent div.search-bar-child input {
-  padding: 30px 50px;
-  font-size: 32px;
-  background: #f5ab35;
-  border: 2px solid #fff;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  border-radius: 50px;
-  color: #fff;
-  display: inline-block;
-  text-align: center;
-  outline: none;
-  text-transform: uppercase;
-}
-/* line 53, ../sass/style.scss */
-body div.parent div.information {
-  font-size: 35px;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 150px 0 0 0;
-}
-/* line 61, ../sass/style.scss */
-body div.related-movies-response-parent {
-  padding: 50px 0 0 0;
-}
-/* line 65, ../sass/style.scss */
-body div.related-movies-response-parent div.response-parent {
-  position: relative;
-  text-align: center;
-}
-/* line 68, ../sass/style.scss */
-body div.related-movies-response-parent div.response-parent .response-back-arrow {
-  left: 50px;
-  top: 20px;
-}
-/* line 72, ../sass/style.scss */
-body div.related-movies-response-parent div.response-parent .search-results {
-  font-size: 35px;
-}
-/* line 75, ../sass/style.scss */
-body div.related-movies-response-parent div.response-parent .search-Text {
-  font-size: 30px;
-  opacity: 0.7;
-  text-transform: capitalize;
-}
-/* line 83, ../sass/style.scss */
-body div.related-movies-response-parent div.movie-poster ul {
-  background: #fff;
-  display: inline-block;
-  padding: 5px;
-}
-/* line 87, ../sass/style.scss */
-body div.related-movies-response-parent div.movie-poster ul li {
-  float: left;
-  width: 48.80%;
-  padding: 5px;
-}
-/* line 91, ../sass/style.scss */
-body div.related-movies-response-parent div.movie-poster ul li img {
-  width: 100%;
-  max-height: 550px;
-}
-/* line 103, ../sass/style.scss */
-body div.single-movies-response-parent .back-arrow-circle-parent {
-  position: relative;
-}
-/* line 105, ../sass/style.scss */
-body div.single-movies-response-parent .back-arrow-circle-parent .back-arrow-circle {
-  top: 50px;
-  left: 30px;
-}
-/* line 111, ../sass/style.scss */
-body div.single-movies-response-parent div.Detail-image img {
-  width: 100%;
-}
-/* line 115, ../sass/style.scss */
-body div.single-movies-response-parent div.movie-name {
-  padding: 30px 20px;
-}
-/* line 117, ../sass/style.scss */
-body div.single-movies-response-parent div.movie-name .movie-name-text {
-  font-size: 35px;
-}
-/* line 120, ../sass/style.scss */
-body div.single-movies-response-parent div.movie-name .movie-release-year {
-  font-size: 25px;
-  padding: 2px;
-  opacity: 0.7;
-}
-/* line 127, ../sass/style.scss */
-body div.single-movies-response-parent div.movie-Detail-text {
-  background: #fff;
-  color: #000;
-  padding: 30px;
-  font-size: 30px;
-  line-height: 50px;
-}
+Backtrace:
+style.scss:43:in `border-radius'
+style.scss:43
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+C:/Ruby22-x64/bin/sass:23:in `load'
+C:/Ruby22-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'border-radius'.\A         on line 43 of style.scss, in `border-radius'\A         from line 43 of style.scss\A \A 38:                 input{\A 39:                     padding: 30px 50px;\A 40:                     font-size: $font32;\A 41:                     background: $parent-bg-clr;\A 42:                     border: 2px solid $white-clr;\A 43:                     @include border-radius(50px);\A 44:                     color: $white-clr;\A 45:                     display: inline-block;\A 46:                     text-align: center;\A 47:                     outline: none;\A 48:                     text-transform: uppercase;"; }
