@@ -109,12 +109,12 @@ body div.parent div.search-bar-parent div.search-bar-child {
 }
 /* line 34, ../sass/style.scss */
 body div.parent div.search-bar-parent div.search-bar-child span.search-icon {
-  top: 33px;
+  top: 30px;
   left: 10px;
 }
 /* line 38, ../sass/style.scss */
 body div.parent div.search-bar-parent div.search-bar-child input {
-  padding: 30px;
+  padding: 30px 50px;
   font-size: 32px;
   background: #f5ab35;
   border: 2px solid #fff;
@@ -173,33 +173,36 @@ body div.related-movies-response-parent div.movie-poster ul li {
 /* line 91, ../sass/style.scss */
 body div.related-movies-response-parent div.movie-poster ul li img {
   width: 100%;
+  max-height: 550px;
 }
-/* line 102, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 body div.single-movies-response-parent .back-arrow-circle-parent {
   position: relative;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 body div.single-movies-response-parent .back-arrow-circle-parent .back-arrow-circle {
   top: 50px;
   left: 30px;
 }
-/* line 110, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 body div.single-movies-response-parent div.Detail-image img {
   width: 100%;
 }
-/* line 114, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name {
   padding: 30px 20px;
 }
-/* line 116, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name .movie-name-text {
   font-size: 35px;
 }
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name .movie-release-year {
   font-size: 25px;
+  padding: 2px;
+  opacity: 0.7;
 }
-/* line 124, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-Detail-text {
   background: #fff;
   color: #000;

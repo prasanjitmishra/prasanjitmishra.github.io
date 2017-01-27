@@ -4,7 +4,7 @@ angular.module('movieApp',[])
             if(movieName.length > 0 && /^[0-9A-Za-z]/.test(movieName))
             {
                 //URL for fetching Details related to serach text
-                var getRelatedMoviesUrl = "https://www.omdbapi.com/?s="+movieName+'&type=movie&tomatoes=true';
+                var getRelatedMoviesUrl = "https://www.omdbapi.com/?s="+movieName+"&type=movie&tomatoes=true";
                 //URL for fetching Details Titlewise
                 //var getSingleMovieUrl = "https://www.omdbapi.com/?t="+movieName+'&type=movie&tomatoes=true';     
                 
@@ -31,7 +31,7 @@ angular.module('movieApp',[])
         };
         
         $scope.getMovieDetail = function(imdbId){
-            var getMovieUrl = "https://www.omdbapi.com/?i="+imdbId+'&type=movie&tomatoes=true';
+            var getMovieUrl = "https://www.omdbapi.com/?i="+imdbId+"&type=movie&tomatoes=true";
             $http.get(getMovieUrl)
             .then(function(response) {
                     $scope.SingleMovieDetails = response.data;

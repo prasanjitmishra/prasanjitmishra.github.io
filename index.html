@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="stylesheets/style.css">
     </head>
     
@@ -41,9 +43,8 @@
             <div class="clear"></div>
             <div class="movie-poster" ng-if="errFlag == 'False'">
                 <ul>
-                    <li ng-repeat="data in RelatedMoviesDetails.Search" data-id="{{data.imdbID}}" 
-                                                                        ng-click="getMovieDetail(this.data.imdbID)">
-                        <img ng-src="{{data.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' :data.Poster}}" alt="" >
+                    <li ng-repeat="data in RelatedMoviesDetails.Search" data-id="{{data.imdbID}}" ng-if="data.Poster!='N/A'" ng-click="getMovieDetail(this.data.imdbID)">
+                        <img ng-src="{{data.Poster}}" alt="" >
                     </li>
                 </ul>
             </div>
@@ -55,21 +56,40 @@
                 <span class="back-arrow-circle"></span>
             </div>
             <div class="Detail-image">
-                <img ng-src="{{SingleMovieDetails.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' : SingleMovieDetails.Poster}}" alt="" >
+                <img ng-src="{{SingleMovieDetails.Poster}}" alt="" >
             </div>  
             <div class="movie-name">
                 <div class="movie-name-text">
                     {{SingleMovieDetails.Title}}
                 </div>
                 <div class="movie-release-year">
-                    {{"Release Year :" + SingleMovieDetails.Year}}
+                    {{"Genre : " + SingleMovieDetails.Genre}}
+                </div>
+                <div class="movie-release-year">
+                    {{"Released on : " + SingleMovieDetails.Released}}
+                </div>
+                <div class="movie-release-year">
+                    {{"imdb Rating : " + SingleMovieDetails.imdbRating}}
                 </div>
             </div>
-
+            <div class="clear"></div>
             <div class="movie-Detail-text">
                 {{SingleMovieDetails.Plot}}
             </div>
-
+            <div class="movie-name">
+                <div class="movie-release-year">
+                    {{"Writer : " + SingleMovieDetails.Writer}}
+                </div>
+                <div class="movie-release-year">
+                    {{"Director : " + SingleMovieDetails.Director}}
+                </div>
+                <div class="movie-release-year">
+                    {{"Actors : " + SingleMovieDetails.Actors}}
+                </div>
+                <div class="movie-release-year">
+                    {{"Awards : " + SingleMovieDetails.Awards}}
+                </div>
+            </div>
         </div>
         
         
