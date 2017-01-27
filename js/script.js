@@ -1,6 +1,7 @@
 angular.module('movieApp',[])
     .controller('movieController',['$scope', '$http', function ($scope, $http) {
         $scope.fetchMovies = function(movieName){
+            $scope.SearchedMovieName = movieName;
             if(movieName.length > 0 && /^[0-9A-Za-z]/.test(movieName))
             {
                 //URL for fetching Details related to serach text
