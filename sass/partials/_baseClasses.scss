@@ -19,11 +19,6 @@ ul{margin: 0;padding: 0}
     width: 38px;  
 }
 
-.margin_10_0{
-    margin: 10px 0;
-}
-.clear{clear: both}
-.hide{display: none !important}
 .response-back-arrow{
     background: url("../images/back-arrow.png") no-repeat;
     display: inline-block;
@@ -38,10 +33,20 @@ ul{margin: 0;padding: 0}
     height: 72px;
     width: 72px;        
 }
+.margin_10_0{
+    margin: 10px 0;
+}
+.clear{clear: both}
+
+.hide{display: none !important}
+
 .common_parent_prop{
     background: $parent-bg-clr;
     margin: 10px auto;
-    width: 850px;
+    width: 800px;
+    @media (max-width: 768px) {
+        width: auto;
+    }
 }
 
 .error{
