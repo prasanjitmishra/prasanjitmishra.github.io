@@ -236,17 +236,35 @@ body div.single-movies-response-parent div.movie-name {
 body div.single-movies-response-parent div.movie-name .movie-name-text {
   font-size: 35px;
 }
-/* line 138, ../sass/style.scss */
+@media (max-width: 768px) {
+  /* line 135, ../sass/style.scss */
+  body div.single-movies-response-parent div.movie-name .movie-name-text {
+    font-size: 30px;
+  }
+}
+/* line 141, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name .movie-release-year {
   font-size: 25px;
   padding: 2px;
   opacity: 0.7;
 }
-/* line 145, ../sass/style.scss */
+@media (max-width: 768px) {
+  /* line 141, ../sass/style.scss */
+  body div.single-movies-response-parent div.movie-name .movie-release-year {
+    font-size: 20px;
+  }
+}
+/* line 151, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-Detail-text {
   background: #fff;
   color: #000;
   padding: 30px;
   font-size: 30px;
   line-height: 50px;
+}
+@media (max-width: 768px) {
+  /* line 151, ../sass/style.scss */
+  body div.single-movies-response-parent div.movie-Detail-text {
+    line-height: normal;
+  }
 }
