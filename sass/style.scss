@@ -11,8 +11,7 @@ body{
     box-sizing: border-box;
     div.parent{
         @extend.common_parent_prop;
-        padding: 50px 0 150px 0;
-        margin-top: 50px;
+        padding: 50px 0;
         @media (max-width: 768px) {
             margin-top: 10px;
         };
@@ -20,7 +19,6 @@ body{
         div.header-image{
             text-align: center;
             img{
-                margin: 50px auto;
                 width:50%;
             };
         };
@@ -30,7 +28,7 @@ body{
             padding: 40px;
             text-align: center;
             font-size: $font35;
-            margin: 100px 0 50px 0;
+            margin: 50px 0;
         };
         
         div.search-bar-parent{
@@ -72,20 +70,40 @@ body{
             font-size: $font35;
             text-transform: uppercase;
             text-align: center;
-            margin: 150px 0 0 0;
+            margin: 50px 0 0 0;
         };
     };
     
     div.related-movies-response-parent{
         @extend.common_parent_prop;
         padding:50px 0 0 0;
+        position:relative;
+        min-height: 300px;
+
+        .loader{
+            position: absolute;top: 0;bottom: 0;right: 0;left: 0;text-align: center;
+            background: $white-clr;z-index:1000;
+            img{
+                margin-top: 15%;
+            }
+        }
         
         div.response-parent{
             position: relative;
             text-align: center;
             .response-back-arrow{
+                position: absolute;
                 left:50px;
                 top: 20px;
+
+                a{
+                    span{
+                        background: url("../images/back-arrow.png") no-repeat;
+                        display: inline-block;
+                        height: 42px;
+                        width: 22px;
+                    }
+                }
             };
             .search-results{
                 font-size: $font35; 
@@ -102,13 +120,15 @@ body{
             padding: 5px;
             ul{
                 display: inline-block;
+                width:100%;
                 li{
                     float: left;
                     width: 49%;
                     padding: 0.5% 0.5% 0 0.5%;
+                    max-height: 350px;
+                    overflow: hidden;
                     img{
                         width: 100%;
-                        max-height: 550px;
                     }
                 }
             }
@@ -117,6 +137,15 @@ body{
     
     div.single-movies-response-parent{
         @extend.common_parent_prop;
+        position: relative;
+        min-height:300px;
+
+        .loader{
+            position: absolute;top: 0;bottom: 0;right: 0;left: 0;text-align: center;background: $white-clr;z-index:1000;
+            img{
+                margin-top: 15%;
+            }
+        }
         
         .back-arrow-circle-parent{
             position: relative;
@@ -134,11 +163,17 @@ body{
             padding: 30px 20px; 
             .movie-name-text{
                 font-size: $font35;
+                @media (max-width: 768px) {
+                        font-size: $font30;
+                };
             };
             .movie-release-year{
                 font-size: $font25;
                 padding: 2px;
                 opacity: 0.7;
+                @media (max-width: 768px) {
+                    font-size: $font20;
+                };
             }
         };
         
@@ -148,6 +183,9 @@ body{
             padding: 30px;
             font-size: 30px;
             line-height: 50px;
+            @media (max-width: 768px) {
+                line-height: normal;
+            };
             
         }
     }

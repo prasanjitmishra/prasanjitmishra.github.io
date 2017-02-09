@@ -1,0 +1,28 @@
+<div class="related-movies-response-parent">
+    <div class="loader" ng-show="loader">
+        <img src="images/hourglass.gif">
+    </div>
+
+        <div class="response-parent">
+            <div class="response-back-arrow">
+                <a href="home"><span></span></a>
+            </div>
+            <div class="search-results">
+                Search Results
+            </div>
+            <div class="search-Text">
+                {{SearchedMovieName+"..."}}
+            </div>
+        </div>
+        <div class="clear"></div> 
+        <div class="movie-poster" ng-if="RelatedMoviesDetails">
+            <ul>
+                <li ng-repeat="data in RelatedMoviesDetails">
+                    <a ng-href="detail/{{data.imdbID}}">
+                        <img ng-src="{{data.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' :data.Poster}}" alt="Image Not Available" >
+                    </a>
+                </li>
+            </ul>
+        </div>
+    <div class="error" ng-if="!RelatedMoviesDetails">{{errText}}</div>
+</div>
