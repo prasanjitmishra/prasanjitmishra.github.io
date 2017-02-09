@@ -1,0 +1,22 @@
+<div class="parent">
+    <div class="header-image">
+        <img ng-src="images/omdb-logo.png" alt="logo">
+    </div>
+    <div class="header-text">
+        Search for your favourite movie...
+    </div>
+    
+    <div class="search-bar-parent">
+        <div class="search-bar-child">
+            <a ng-href="movies/{{searchedText}}">
+                <span class="search-icon"></span>
+            </a>
+            <input type="text" value="SEARCH" placeholder="SEARCH" ng-model="searchedText" />
+        </div>
+    </div>
+    
+    <div class="information">
+        <div class="margin_10_0">The Largest</div>
+        <div class="margin_10_0">online movie database</div>
+    </div>
+</div>

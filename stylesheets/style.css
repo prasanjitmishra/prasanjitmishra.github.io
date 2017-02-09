@@ -30,15 +30,6 @@ ul {
 }
 
 /* line 22, ../sass/partials/_baseClasses.scss */
-.response-back-arrow {
-  background: url("../images/back-arrow.png") no-repeat;
-  display: inline-block;
-  position: absolute;
-  height: 42px;
-  width: 22px;
-}
-
-/* line 29, ../sass/partials/_baseClasses.scss */
 .back-arrow-circle {
   background: url("../images/back-arrow-circle.png") no-repeat;
   display: inline-block;
@@ -47,39 +38,40 @@ ul {
   width: 72px;
 }
 
-/* line 36, ../sass/partials/_baseClasses.scss */
+/* line 29, ../sass/partials/_baseClasses.scss */
 .margin_10_0 {
   margin: 10px 0;
 }
 
-/* line 39, ../sass/partials/_baseClasses.scss */
+/* line 32, ../sass/partials/_baseClasses.scss */
 .clear {
   clear: both;
 }
 
-/* line 41, ../sass/partials/_baseClasses.scss */
+/* line 34, ../sass/partials/_baseClasses.scss */
 .hide {
   display: none !important;
 }
 
-/* line 43, ../sass/partials/_baseClasses.scss */
+/* line 36, ../sass/partials/_baseClasses.scss */
 .common_parent_prop, body div.parent, body div.related-movies-response-parent, body div.single-movies-response-parent {
   background: #f5ab35;
   margin: 10px auto;
   width: 800px;
 }
 @media (max-width: 768px) {
-  /* line 43, ../sass/partials/_baseClasses.scss */
+  /* line 36, ../sass/partials/_baseClasses.scss */
   .common_parent_prop, body div.parent, body div.related-movies-response-parent, body div.single-movies-response-parent {
     width: auto;
   }
 }
 
-/* line 52, ../sass/partials/_baseClasses.scss */
+/* line 45, ../sass/partials/_baseClasses.scss */
 .error {
   text-align: center;
   font-size: 30px;
   opacity: 0.5;
+  margin-top: 20px;
 }
 
 /* line 6, ../sass/style.scss */
@@ -174,87 +166,134 @@ body div.parent div.information {
 /* line 79, ../sass/style.scss */
 body div.related-movies-response-parent {
   padding: 50px 0 0 0;
+  position: relative;
+  min-height: 300px;
 }
-/* line 83, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
+body div.related-movies-response-parent .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background: #fff;
+  z-index: 1000;
+}
+/* line 88, ../sass/style.scss */
+body div.related-movies-response-parent .loader img {
+  margin-top: 15%;
+}
+/* line 93, ../sass/style.scss */
 body div.related-movies-response-parent div.response-parent {
   position: relative;
   text-align: center;
 }
-/* line 86, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 body div.related-movies-response-parent div.response-parent .response-back-arrow {
+  position: absolute;
   left: 50px;
   top: 20px;
 }
-/* line 90, ../sass/style.scss */
+/* line 102, ../sass/style.scss */
+body div.related-movies-response-parent div.response-parent .response-back-arrow a span {
+  background: url("../images/back-arrow.png") no-repeat;
+  display: inline-block;
+  height: 42px;
+  width: 22px;
+}
+/* line 110, ../sass/style.scss */
 body div.related-movies-response-parent div.response-parent .search-results {
   font-size: 35px;
 }
-/* line 93, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 body div.related-movies-response-parent div.response-parent .search-Text {
   font-size: 30px;
   opacity: 0.7;
   text-transform: capitalize;
 }
-/* line 100, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 body div.related-movies-response-parent div.movie-poster {
   background: #fff;
   padding: 5px;
 }
-/* line 103, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 body div.related-movies-response-parent div.movie-poster ul {
   display: inline-block;
+  width: 100%;
 }
-/* line 105, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 body div.related-movies-response-parent div.movie-poster ul li {
   float: left;
   width: 49%;
   padding: 0.5% 0.5% 0 0.5%;
+  max-height: 350px;
+  overflow: hidden;
 }
-/* line 109, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 body div.related-movies-response-parent div.movie-poster ul li img {
   width: 100%;
-  max-height: 550px;
 }
-/* line 121, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
+body div.single-movies-response-parent {
+  position: relative;
+  min-height: 300px;
+}
+/* line 145, ../sass/style.scss */
+body div.single-movies-response-parent .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  background: #fff;
+  z-index: 1000;
+}
+/* line 147, ../sass/style.scss */
+body div.single-movies-response-parent .loader img {
+  margin-top: 15%;
+}
+/* line 152, ../sass/style.scss */
 body div.single-movies-response-parent .back-arrow-circle-parent {
   position: relative;
 }
-/* line 123, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 body div.single-movies-response-parent .back-arrow-circle-parent .back-arrow-circle {
   top: 50px;
   left: 30px;
 }
-/* line 129, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 body div.single-movies-response-parent div.Detail-image img {
   width: 100%;
 }
-/* line 133, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name {
   padding: 30px 20px;
 }
-/* line 135, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name .movie-name-text {
   font-size: 35px;
 }
 @media (max-width: 768px) {
-  /* line 135, ../sass/style.scss */
+  /* line 166, ../sass/style.scss */
   body div.single-movies-response-parent div.movie-name .movie-name-text {
     font-size: 30px;
   }
 }
-/* line 141, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-name .movie-release-year {
   font-size: 25px;
   padding: 2px;
   opacity: 0.7;
 }
 @media (max-width: 768px) {
-  /* line 141, ../sass/style.scss */
+  /* line 172, ../sass/style.scss */
   body div.single-movies-response-parent div.movie-name .movie-release-year {
     font-size: 20px;
   }
 }
-/* line 151, ../sass/style.scss */
+/* line 182, ../sass/style.scss */
 body div.single-movies-response-parent div.movie-Detail-text {
   background: #fff;
   color: #000;
@@ -263,7 +302,7 @@ body div.single-movies-response-parent div.movie-Detail-text {
   line-height: 50px;
 }
 @media (max-width: 768px) {
-  /* line 151, ../sass/style.scss */
+  /* line 182, ../sass/style.scss */
   body div.single-movies-response-parent div.movie-Detail-text {
     line-height: normal;
   }

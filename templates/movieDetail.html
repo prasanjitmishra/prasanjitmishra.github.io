@@ -1,0 +1,52 @@
+<div class="single-movies-response-parent">
+    <div class="loader" ng-show="loader">
+        <img src="images/hourglass.gif">
+    </div>
+    
+    <div class="back-arrow-circle-parent">
+        <a href="movies/{{SearchedMovieName}}"><span class="back-arrow-circle"></span></a>
+    </div>
+    <div ng-if="SingleMovieDetails">
+    <div class="Detail-image">
+        <img ng-src="{{SingleMovieDetails.Poster=='N/A' ?'http://placehold.it/150x220&text=N/A' : SingleMovieDetails.Poster}}" alt="Image Not Available" >
+    </div>  
+    <div class="movie-name">
+        <div class="movie-name-text">
+            {{SingleMovieDetails.Title}}
+        </div>
+        <div class="movie-release-year">
+            {{"Genre : " + SingleMovieDetails.Genre}}
+        </div>
+        <div class="movie-release-year">
+            {{"Released on : " + SingleMovieDetails.Released}}
+        </div>
+        <div class="movie-release-year">
+            {{"imdb Rating : " + SingleMovieDetails.imdbRating}}
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="movie-Detail-text">
+        {{SingleMovieDetails.Plot}}
+    </div>
+    <div class="movie-name">
+        <div class="movie-release-year">
+            {{"Writer : " + SingleMovieDetails.Writer}}
+        </div>
+        <div class="movie-release-year">
+            {{"Director : " + SingleMovieDetails.Director}}
+        </div>
+        <div class="movie-release-year">
+            {{"Actors : " + SingleMovieDetails.Actors}}
+        </div>
+        <div class="movie-release-year">
+            {{"Awards : " + SingleMovieDetails.Awards}}
+        </div>
+    </div>
+    </div>
+    <div class="error" ng-if="!SingleMovieDetails">
+        <pre>
+            SORRY, SOME PROBLEM HAS OCCURED.
+            PLEASE GO BACK.....
+        </pre>
+    </div>
+</div>

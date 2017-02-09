@@ -19,13 +19,6 @@ ul{margin: 0;padding: 0}
     width: 38px;  
 }
 
-.response-back-arrow{
-    background: url("../images/back-arrow.png") no-repeat;
-    display: inline-block;
-    position: absolute;
-    height: 42px;
-    width: 22px;
-}
 .back-arrow-circle{
     background: url("../images/back-arrow-circle.png") no-repeat;
     display: inline-block;
@@ -53,4 +46,5 @@ ul{margin: 0;padding: 0}
     text-align: center;
     font-size: $font30;
     opacity: 0.5;
+    margin-top:20px;
 }
