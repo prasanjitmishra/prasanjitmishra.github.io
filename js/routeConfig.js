@@ -91,7 +91,7 @@ var myApp = angular.module('movieApp', ['ngRoute'])
     if($scope.SearchedMovieName.length > 0 && /^[0-9A-Za-z]/.test($scope.SearchedMovieName))
     {
         //URL for fetching Details related to serach text
-        var getRelatedMoviesUrl = "http://www.omdbapi.com/?s="+$scope.SearchedMovieName+"&type=movie&tomatoes=true";
+        var getRelatedMoviesUrl = "https://www.omdbapi.com/?s="+$scope.SearchedMovieName+"&type=movie&tomatoes=true";
         //URL for fetching Details Titlewise
         //var getSingleMovieUrl = "https://www.omdbapi.com/?t="+movieName+'&type=movie&tomatoes=true';     
 
@@ -120,7 +120,7 @@ var myApp = angular.module('movieApp', ['ngRoute'])
         $scope.loader = true;
         $scope.SearchedMovieName = sharedProperties.getMovieName();
         console.log("movieDetailController");
-        var getMovieUrl = "http://www.omdbapi.com/?i="+$routeParams.imdbID+"&type=movie&tomatoes=true";
+        var getMovieUrl = "https://www.omdbapi.com/?i="+$routeParams.imdbID+"&type=movie&tomatoes=true";
 
         sharedProperties.getMovieListData(getMovieUrl)
         .then(function(response) {
